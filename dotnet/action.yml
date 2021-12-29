@@ -15,10 +15,6 @@ inputs:
     default: false
 runs:
   using: "docker"
-  with:
-    registry: ghcr.io
-    username: ${{ github.actor }}
-    password: ${{ secrets.GITHUB_TOKEN }}
   image: "ghcr.io/sydseter/snyk:dotnet"
   env:
     SNYK_INTEGRATION_NAME: GITHUB_ACTIONS
